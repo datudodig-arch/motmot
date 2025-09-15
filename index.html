@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy 3rd Anniversary ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Background floating hearts container -->
+  <div id="floating-hearts"></div>
+
+  <!-- Background glowing particles -->
+  <canvas id="bg-particles"></canvas>
+
+  <!-- Background music controls -->
+  <audio id="bg-music" loop preload="auto" src="https://cdn.pixabay.com/download/audio/2022/03/23/audio_3a7a7a3a3a.mp3?filename=romantic-piano-11243.mp3"></audio>
+  <button id="music-toggle" aria-label="Toggle background music" title="Play/Pause Music" aria-pressed="false">
+    <span id="music-icon">🔈</span>
+  </button>
+
+  <!-- Navigation -->
+  <nav id="nav-bar" aria-label="Main navigation">
+    <button class="nav-btn active" data-target="welcome">Welcome</button>
+    <button class="nav-btn" data-target="images">Our Images</button>
+    <button class="nav-btn" data-target="videos">Our Videos</button>
+    <button class="nav-btn" data-target="love-letter">Love Letter</button>
+    <button class="nav-btn" data-target="her-response">Her Response</button>
+  </nav>
+
+  <!-- Main content container -->
+  <main>
+    <!-- Welcome Section -->
+    <section id="welcome" class="page active" tabindex="0" aria-label="Welcome Section">
+      <div class="welcome-content">
+        <h1 class="fade-in">Alex &amp; Jamie</h1>
+        <h2 class="fade-in delay-1">Happy 3rd Anniversary <span aria-hidden="true">❤️</span></h2>
+      </div>
+    </section>
+
+    <!-- Our Images Section -->
+    <section id="images" class="page" tabindex="0" aria-label="Photo Album Section">
+      <h2>Our Images</h2>
+      <div class="category-buttons" role="tablist" aria-label="Photo categories">
+        <button class="category-btn active" data-category="all" role="tab" aria-selected="true">All</button>
+        <button class="category-btn" data-category="travel" role="tab" aria-selected="false">Travel</button>
+        <button class="category-btn" data-category="dates" role="tab" aria-selected="false">Dates</button>
+        <button class="category-btn" data-category="selfies" role="tab" aria-selected="false">Selfies</button>
+        <button class="category-btn" data-category="funny" role="tab" aria-selected="false">Funny Moments</button>
+      </div>
+      <div class="slideshow-container" aria-live="polite" aria-atomic="true">
+        <button class="slide-btn prev" aria-label="Previous photo">‹</button>
+        <div class="slide-wrapper">
+          <img src="" alt="" id="slide-image" />
+          <p id="slide-caption"></p>
+        </div>
+        <button class="slide-btn next" aria-label="Next photo">›</button>
+      </div>
+    </section>
+
+    <!-- Our Videos Section -->
+    <section id="videos" class="page" tabindex="0" aria-label="Video Gallery Section">
+      <h2>Our Videos</h2>
+      <div class="video-gallery">
+        <!-- Example embedded videos -->
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Our Trip Video" frameborder="0" allowfullscreen></iframe>
+          <p>Our Trip to the Mountains</p>
+        </div>
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Funny Moments" frameborder="0" allowfullscreen></iframe>
+          <p>Funny Moments Compilation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section id="love-letter" class="page" tabindex="0" aria-label="Love Letter Section">
+      <h2>My Love Letter to You</h2>
+      <div id="letter-container" aria-live="polite" aria-atomic="true">
+        <p id="love-letter-text" class="typing-effect"></p>
+      </div>
+      <div id="falling-hearts-container" aria-hidden="true"></div>
+    </section>
+
+    <!-- Her Response Section -->
+    <section id="her-response" class="page" tabindex="0" aria-label="Her Response Section">
+      <h2>Your Response</h2>
+      <textarea id="response-text" placeholder="Write your reply here..." aria-label="Write your response"></textarea>
+      <button id="save-response" aria-label="Save your response">Save</button>
+      <div id="saved-response" aria-live="polite" aria-atomic="true"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
