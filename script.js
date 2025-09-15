@@ -199,7 +199,7 @@ Bob`;
   // Initialize slideshow with all photos
   filterPhotos('all');
 
-  // Floating hearts animation (optional enhancement)
+  // Floating hearts animation
   function createFloatingHeart() {
     const heart = document.createElement('div');
     heart.classList.add('floating-heart');
@@ -215,5 +215,4 @@ Bob`;
   }
 
   setInterval(createFloatingHeart, 800);
-
 });
